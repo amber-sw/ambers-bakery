@@ -1,3 +1,14 @@
+---
+import logo from '../assets/logo_notext.png';
+
+
+const backgroundColor = "#fef8ec";
+const lightColor = "#cf9d44";
+const mediumColor = "#8e530f";
+const darkColor = "#784010";
+const accentColor = "#8f8848";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -9,19 +20,53 @@
 	</head>
 	<body>
 		<nav>
-			<a href="/">Home</a>
 			<a href="/pricelist">Prijslijst</a>
+			<a href="/"><img class="navbar__logo" src={logo.src} width="115" /></a>
 			<a href="/contact">Contact</a>
 		</nav>
-		<slot />
+		<article>
+			<slot />
+		</article>
 	</body>
 </html>
 
-<style>
+<style is:global define:vars={{ lightColor, mediumColor, darkColor, accentColor, backgroundColor }}>
+	@font-face {
+		font-family: 'Milkshake';
+		src: url('/fonts/milkshake.otf') format('otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background-color: var(--backgroundColor);
+	}
+
+	h1 {
+		font-family: 'Milkshake', sans-serif;
+	}
+
+	nav {
+		display: flex;
+		justify-content: center;
+		gap: 15vw;
+		align-items: center;
+	}
+
+	nav a {
+		font-family: 'Milkshake', sans-serif;
+		text-decoration: none;
+		font-weight: 100;
+		color: var(--darkColor);
+		font-size: 24px;
+	}
+
+	.navbar__logo {
+		border-radius: 50%;
 	}
 </style>
