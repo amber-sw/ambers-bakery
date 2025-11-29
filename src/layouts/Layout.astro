@@ -1,6 +1,6 @@
 ---
-import logo from '../assets/logo_notext.png';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
 const backgroundColor = "#fef8ec";
 const lightColor = "#cf9d44";
@@ -27,6 +27,7 @@ const accentColor = "#8f8848";
 		<article>
 			<Navigation/>
 			<slot />
+			<Footer></Footer>
 		</article>
 	</body>
 </html>
