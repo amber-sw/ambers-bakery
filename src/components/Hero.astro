@@ -1,63 +1,32 @@
 ---
-import hero from '../assets/hero.jpg';
-import logo from '../assets/logo_notext.png';
+import logo from "../assets/logofull_nobg.png";
 ---
 
-  <div class="bg-gray-900">
-    <header class="absolute inset-x-0 top-0 z-50">
-      <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
-        <div class="flex lg:hidden w-full relative">
-          <button command="show-modal" commandfor="mobile-menu" type="button" class="-m-2.5 inline-flex absolute right-0 rounded-md p-2.5 text-background">
-            <span class="sr-only">Open main menu</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden w-full items-center justify-center lg:flex lg:gap-x-12 text-background text-2xl">
-			<a class="px-8" href="/pricelist">Prijslijst</a>
-			<a class="px-8" href="/"><img class="navbar__logo" src={logo.src} width="115" /></a>
-			<a class="px-8" href="/contact">Contact</a>
-        </div>
-      </nav>
-      <el-dialog>
-        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-          <div tabindex="0" class="fixed inset-0 focus:outline-none">
-            <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-              <div class="flex items-start justify-between">
-                <a href="#" class="-m-1.5 p-1.5 flex flex-col align-middle justify-center">
-                    <img src={logo.src} alt="" class="size-17 m-auto" />
-                    <h1 class="text-dark">Amber's Bakery</h1>
-                </a>
-                <button command="close" commandfor="mobile-menu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400">
-                  <span class="sr-only">Close menu</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </button>
-              </div>
-              <div class="mt-6 flow-root">
-                <div class="-my-6 divide-y divide-gray-500/25">
-                  <div class="space-y-2 py-6 flex flex-col">
-                    <a href="/">Home</a>
-                    <a href="/pricelist">Prijslijst</a>
-                    <a href="/contact">Contact</a>
-                  </div>
-                </div>
-              </div>
-            </el-dialog-panel>
-          </div>
-        </dialog>
-      </el-dialog>
-    </header>
-  
-    <div class="relative isolate overflow-hidden pt-14">
-      <img src={hero.src} alt="" class="absolute inset-0 -z-10 size-full object-cover blur-sm" />
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="text-center mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <h1 class="text-5xl font-semibold tracking-tight text-balance text-background sm:text-7xl">Amber's Bakery</h1>
-            <h2 class="mt-8 text-2xl font-bold text-pretty text-background">Baking your story into every bite</h2>
-        </div>
-      </div>
+<section id="home" class="min-h-screen flex items-center justify-center px-6 pt-8">
+  <div class="max-w-4xl mx-auto text-center">
+    <img
+      src={logo.src}
+      alt="Amber's Bakery"
+      class="w-80 h-80 mx-auto mb-8"
+    />
+
+    <h1 class="text-5xl md:text-6xl font-bold text-dark mb-6">
+      Baking your story into every bite
+    </h1>
+
+    <p class="text-xl md:text-2xl text-medium mb-12 max-w-2xl mx-auto leading-relaxed">
+    Huisgemaakte cakes, cupcakes, koekjes en andere zoete creaties, volledig op maat gemaakt voor elk event, thema of bijzonder moment.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#featured"
+        class="px-8 py-4 bg-light text-white rounded-full text-lg font-medium hover:bg-light transition-colors shadow-lg">
+        Bekijk het assortiment
+      </a>
+      <a href="#contact"
+        class="px-8 py-4 bg-white text-dark rounded-full text-lg font-medium hover:bg-background transition-colors border-2 border-light">
+        Contacteer mij
+      </a>
     </div>
   </div>
+</section>

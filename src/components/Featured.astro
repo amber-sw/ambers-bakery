@@ -1,0 +1,90 @@
+---
+import cupcakes from "../assets/cupcakes.jpg";
+import cakepops from "../assets/cakepops.jpg";
+const items = [
+  {
+    name: 'Gepersonaliseerde taarten',
+    description:
+      'Unieke taarten die volledig worden afgestemd op jouw smaak, thema en gelegenheid.',
+    price: 'Vanaf €5/p.p.',
+    image:
+      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80',
+  },
+  {
+    name: 'Cupcakes',
+    description:
+      'Smaakvolle cupcakes met creatieve toppings en afwerkingen voor elk zoet moment.',
+    price: 'Vanaf €12/6 stuks.',
+    image:
+      cupcakes.src,
+  },
+  {
+    name: 'Koekjes',
+    description:
+      'Ambachtelijke koekjes, versgebakken en prachtig gedecoreerd voor feestjes, traktaties of gewoon tussendoor.',
+    price: 'Vanaf €1/stuk.',
+    image:
+      'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80',
+  },
+  {
+    name: 'Cakepops',
+    description:
+      'Kleine, feestelijke cakeballetjes op een stokje. Perfect voor kinderfeestjes, desserttafels en als leuke traktatie.',
+    price: 'Vanaf €12/6 stuks',
+    image: cakepops.src,
+  },
+]
+---
+<section id="featured" class="py-24 px-6 bg-background">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">
+          Assortiment
+        </h2>
+        <p class="text-xl text-medium max-w-2xl mx-auto">
+          A selection of our most loved treats, baked fresh daily with premium
+          ingredients
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.name}
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-2xl font-semibold text-dark">
+                  {item.name}
+                </h3>
+                <span class="text-lg font-medium text-light">
+                  {item.price}
+                </span>
+              </div>
+              <p class="text-medium leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-lg text-medium mb-6">
+          Wil je een bestelling plaatsen of kijken wat de mogelijkheden zijn voor jouw wens? Twijfel niet om me te contacteren.
+        </p>
+        <a href="#contact"
+          class="inline-block px-8 py-4 bg-light text-white rounded-full text-lg font-medium hover:bg-medium transition-colors shadow-lg">
+          Contacteer mij
+        </a>
+      </div>
+    </div>
+  </section>
