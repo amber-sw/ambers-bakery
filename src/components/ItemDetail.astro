@@ -1,0 +1,35 @@
+---
+
+const { item } = Astro.params;
+---
+<section id="about" class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold text-dark mb-6">
+            {item}
+          </h2>
+          <p class="text-lg text-medium mb-6 leading-relaxed">
+            itemdescription
+          </p>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl">
+            <img
+              src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80'
+              alt="Fresh baked goods"
+              class="w-full h-[500px] object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-8 -left-8 bg-background rounded-2xl p-8 shadow-xl max-w-xs">
+            <img
+              src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80'
+              alt="Fresh baked goods"
+              class="w-full h-[500px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

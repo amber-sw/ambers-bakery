@@ -1,31 +1,6 @@
 ---
-import cupcakes from "../assets/cupcakes.jpg";
-import cakepops from "../assets/cakepops.jpg";
-const items = [
-  {
-    name: 'Gepersonaliseerde taarten',
-    description:
-      'Unieke taarten die volledig worden afgestemd op jouw smaak, thema en gelegenheid.',
-    price: 'Vanaf €5/p.p.',
-    image:
-      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80',
-  },
-  {
-    name: 'Cupcakes',
-    description:
-      'Smaakvolle cupcakes met creatieve toppings en afwerkingen voor elk zoet moment.',
-    price: 'Vanaf €12/6 stuks.',
-    image:
-      cupcakes.src,
-  },
-  {
-    name: 'Koekjes',
-    description:
-      'Ambachtelijke koekjes, versgebakken en prachtig gedecoreerd voor feestjes, traktaties of gewoon tussendoor.',
-    price: 'Vanaf €1/stuk.',
-    image:
-      'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80',
-  },
+import assortimentData from "../assets/data/assortiment.json"
+const items = assortimentData.data;
   // {
   //   name: 'Cakepops',
   //   description:
@@ -33,7 +8,9 @@ const items = [
   //   price: 'Vanaf €12/6 stuks',
   //   image: cakepops.src,
   // },
-]
+
+
+
 ---
 <section id="featured" class="py-24 px-6 bg-background">
     <div class="max-w-6xl mx-auto">
@@ -48,9 +25,10 @@ const items = [
 
       <div class="grid md:grid-cols-2 gap-8">
         {items.map((item, index) => (
-          <div
+          <a
             key={index}
             class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            href={"/assortiment/" + item.path}
           >
             <div class="h-64 overflow-hidden">
               <img
@@ -72,7 +50,7 @@ const items = [
                 {item.description}
               </p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
 

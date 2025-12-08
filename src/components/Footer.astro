@@ -1,24 +1,28 @@
 ---
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_notext.png";
 ---
-<footer class="bg-dark text-background py-12 px-6">
+<footer class="bg-dark text-background-dark py-12 px-6">
     <div class="max-w-6xl mx-auto text-center">
       <img
         src={logo.src}
         alt="Amber's Bakery"
         class="size-32 rounded-full mx-auto mb-4 opacity-80"
       />
+      <div class="text-2xl font-bold font-script text-background">
+        Amber's Bakery
+      </div>
+  
       <h2 class="mb-8">
         Baking your story into every bite
       </h2>
       <div class="flex justify-between">
-          <p class="text-sm text-light">
+          <p class="text-sm text-background">
             BE123.456.789 (TEMPORARY)
           </p>
-          <p class="text-sm text-light">
+          <p class="text-sm text-background">
             © 2025 Amber's Bakery. Alle rechten voorbehouden.
           </p>
-          <p class="text-sm text-light hover:text-background">
+          <p class="text-sm text-background hover:text-light">
             <a href="./favicon.svg">Algemene voorwaarden</a>
           </p>
       </div>

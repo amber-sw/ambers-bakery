@@ -1,0 +1,19 @@
+---
+import ItemDetail from '../../components/ItemDetail.astro';
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { path: undefined }},
+    { params: { path: "gepersonaliseerde-taarten" }},
+    { params: { path: "cupcakes" }},
+    { params: { path: "koekjes" }}
+  ]
+}
+
+const { path } = Astro.params;
+---
+
+<Layout>
+	<ItemDetail>
+</Layout>

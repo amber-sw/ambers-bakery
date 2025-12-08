@@ -1,0 +1,31 @@
+{ 
+    "data":[
+        {
+          "name": "Gepersonaliseerde taarten",
+          "path": "gepersonaliseerde-taarten",
+          "description":
+            "Unieke taarten die volledig worden afgestemd op jouw smaak, thema en gelegenheid.",
+          "price": "Vanaf €5/p.p.",
+          "image":
+            "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80"
+        },
+        {
+          "name": "Cupcakes",
+          "path": "cupcakes",
+          "description":
+            "Smaakvolle cupcakes met creatieve toppings en afwerkingen voor elk zoet moment.",
+          "price": "Vanaf €12/6 stuks.",
+          "image":
+            "cupcakes"
+        },
+        {
+          "name": "Koekjes",
+          "path": "koekjes",
+          "description":
+            "Ambachtelijke koekjes, versgebakken en prachtig gedecoreerd voor feestjes, traktaties of gewoon tussendoor.",
+          "price": "Vanaf €1/stuk.",
+          "image":
+            "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80"
+        }
+    ]      
+}
